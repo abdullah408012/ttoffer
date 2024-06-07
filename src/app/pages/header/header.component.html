@@ -1,0 +1,86 @@
+<header class="header bg-white border-bottom">
+	<div class="container d-flex justify-content-between align-items-center py-2">
+	  <div class="logo">
+		<img src="path-to-logo.png" alt="TT Offer Logo" class="img-fluid" style="width: 120px;">
+	  </div>
+	  <div class="search-bar d-none d-md-flex align-items-center">
+		<input type="text" class="form-control mr-2" placeholder="Search">
+		<select class="form-control mr-2">
+		  <option>For Sale</option>
+		  <!-- Add more options if needed -->
+		</select>
+		<button class="btn btn-outline-secondary">
+		  <i class="search-icon"></i>
+		</button>
+	  </div>
+	  <div class="location d-none d-lg-block">
+		<span>Belarus</span>
+	  </div>
+	  <div class="menu d-none d-lg-flex align-items-center">
+		<span class="mr-3">Saved</span>
+		<span class="mr-3">Chat</span>
+		<span>Selling</span>
+	  </div>
+	  <div class="actions d-none d-lg-flex align-items-center">
+		<button class="btn btn-warning mr-2">Post Product</button>
+		<button class="btn btn-dark" >Log In</button>
+	  </div>
+	  <div class="mobile-menu-icon d-lg-none" (click)="toggleMobileMenu()">
+		&#9776; <!-- Menu icon -->
+	  </div>
+	</div>
+	<nav class="navigation d-none d-lg-flex justify-content-center border-top">
+	  <a class="nav-link" href="#">Electronics & Media</a>
+	  <a class="nav-link" href="#">Home & Garden</a>
+	  <a class="nav-link" href="#">Baby & Kids</a>
+	  <a class="nav-link" href="#">Vehicle</a>
+	  <a class="nav-link" href="#">Toys & Hobbies</a>
+	  <a class="nav-link" href="#">Sports & Outdoors</a>
+	  <a class="nav-link" href="#">Clothes</a>
+	  <a class="nav-link more" (click)="toggleMoreMenu()">More</a>
+	  <div class="dropdown-menu more-menu" [class.show]="isMoreMenuOpen">
+		<a class="dropdown-item" href="#">Option 1</a>
+		<a class="dropdown-item" href="#">Option 2</a>
+		<a class="dropdown-item" href="#">Option 3</a>
+	  </div>
+	</nav>
+  
+	<!-- Mobile Navigation -->
+	<div class="mobile-navigation d-lg-none" [class.show]="isMobileMenuOpen">
+	  <a class="nav-link" href="#">Electronics & Media</a>
+	  <a class="nav-link" href="#">Home & Garden</a>
+	  <a class="nav-link" href="#">Baby & Kids</a>
+	  <a class="nav-link" href="#">Vehicle</a>
+	  <a class="nav-link" href="#">Toys & Hobbies</a>
+	  <a class="nav-link" href="#">Sports & Outdoors</a>
+	  <a class="nav-link" href="#">Clothes</a>
+	  <a class="nav-link more" (click)="toggleMoreMenu()">More</a>
+	  <div class="dropdown-menu mobile-more-menu" [class.show]="isMoreMenuOpen">
+		<a class="dropdown-item" href="#">Option 1</a>
+		<a class="dropdown-item" href="#">Option 2</a>
+		<a class="dropdown-item" href="#">Option 3</a>
+	  </div>
+	</div>
+  
+	<!-- Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="loginModalLabel">Sign up/Log in</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<button class="btn btn-block btn-outline-primary mb-2">Continue with Google</button>
+			<button class="btn btn-block btn-dark mb-2">Continue with Apple</button>
+			<button class="btn btn-block btn-outline-secondary mb-2">Continue with Phone</button>
+			<button class="btn btn-block btn-outline-info">Continue with Email</button>
+			<p>By moving forward, you're agreeing to our Terms of Service and recognizing that you've checked out our Privacy Policy to understand how we handle your information.</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+
